@@ -29,7 +29,7 @@ object GraphvizParser {
   def getNodes(attributes: NodeSeq): List[Node] = {
     val names: Seq[String] = filter(attributes, "label").map((n: scala.xml.Node) => prettify(n.text)).filterNot(_.isEmpty)
     val nameIds: Seq[String] = filter(attributes, "id").map((n: scala.xml.Node) => n.text)
-    nameIds.zip(names).map((tuple: (String, String)) => new Node(tuple._1, prettify(tuple._2))).toList
+    nameIds.zip(names).map((tuple: (String, String)) => new Node(tuple._1, tuple._2)).toList
   }
 
   def getEdges(attributes: NodeSeq, nodes: List[Node]): List[Edge] = {
