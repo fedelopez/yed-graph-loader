@@ -1,1 +1,1 @@
-Demo project showcasing how to load a [Graphviz](http://www.graphviz.org/) files in Scala.
+Demo project showcasing how to load [Graphviz](http://www.graphviz.org/) files in Scala.
