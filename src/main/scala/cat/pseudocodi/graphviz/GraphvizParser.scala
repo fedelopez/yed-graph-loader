@@ -23,7 +23,7 @@ object GraphvizParser {
     val nodes = getNodes(attributes)
     val edges = getEdges(attributes, nodes)
 
-    new Graph(getNodes(attributes).toList, edges)
+    new Graph(nodes, edges)
   }
 
   def getNodes(attributes: NodeSeq): List[Node] = {
